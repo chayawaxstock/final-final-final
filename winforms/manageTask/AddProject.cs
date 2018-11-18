@@ -53,9 +53,8 @@ namespace manageTask
             {
                 foreach (var item in ModelState.Results)
                 {
-                    if (item.MemberNames.ToList()[0] == "UX")
-                        errorProvider1.SetError(grbx_hours, item.ErrorMessage);
-                   else errorProvider1.SetError(gb_addProject.Controls["txt_" + item.MemberNames.ToList()[0]], item.ErrorMessage);
+
+                    errorProvider1.SetError(gb_addProject.Controls["txt_" + item.MemberNames.ToList()[0]], item.ErrorMessage);
                 }
             }
         }
@@ -77,7 +76,7 @@ namespace manageTask
             project.HoursForDepartment.Add(new HourForDepartment() { DepartmentId = 2, SumHours = int.Parse(txt_development.Text) });
             project.HoursForDepartment.Add(new HourForDepartment() { DepartmentId = 3, SumHours = int.Parse(txt_qa.Text) });
             project.HoursForDepartment.Add(new HourForDepartment() { DepartmentId = 4, SumHours = int.Parse(txt_ui.Text) });
-            project.HoursForDepartment.Add(new HourForDepartment() { DepartmentId = 5, SumHours = int.Parse(txt_UX.Text) });
+            project.HoursForDepartment.Add(new HourForDepartment() { DepartmentId = 5, SumHours = int.Parse(txt_ux.Text) });
             project.ProjectId = 0;
             return project;
         }

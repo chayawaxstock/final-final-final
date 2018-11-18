@@ -44,8 +44,8 @@ namespace manageTask
             this.materialTealTheme1 = new Telerik.WinControls.Themes.MaterialTealTheme();
             this.txt_NumHoursWork = new Telerik.WinControls.UI.RadSpinEditor();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lbl_confirmPass = new Telerik.WinControls.UI.RadLabel();
-            this.txt_ConfirmPassword = new Telerik.WinControls.UI.RadTextBox();
+            this.radWaitingBar2 = new Telerik.WinControls.UI.RadWaitingBar();
+            this.dotsRingWaitingBarIndicatorElement1 = new Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_email)).BeginInit();
@@ -58,8 +58,7 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.lbl_team_leader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NumHoursWork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_confirmPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ConfirmPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +109,7 @@ namespace manageTask
             // 
             // txt_UserName
             // 
-            this.txt_UserName.Location = new System.Drawing.Point(247, 84);
+            this.txt_UserName.Location = new System.Drawing.Point(206, 85);
             this.txt_UserName.Name = "txt_UserName";
             this.txt_UserName.Size = new System.Drawing.Size(100, 36);
             this.txt_UserName.TabIndex = 5;
@@ -118,7 +117,7 @@ namespace manageTask
             // 
             // txt_Email
             // 
-            this.txt_Email.Location = new System.Drawing.Point(247, 180);
+            this.txt_Email.Location = new System.Drawing.Point(206, 181);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(100, 36);
             this.txt_Email.TabIndex = 8;
@@ -126,7 +125,7 @@ namespace manageTask
             // 
             // txt_Password
             // 
-            this.txt_Password.Location = new System.Drawing.Point(247, 138);
+            this.txt_Password.Location = new System.Drawing.Point(206, 133);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(100, 36);
             this.txt_Password.TabIndex = 9;
@@ -134,13 +133,12 @@ namespace manageTask
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(156, 440);
+            this.btn_add.Location = new System.Drawing.Point(276, 399);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(85, 46);
             this.btn_add.TabIndex = 12;
             this.btn_add.Text = "Add";
             this.btn_add.ThemeName = "MaterialTeal";
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // lbl_team_leader
             // 
@@ -155,23 +153,22 @@ namespace manageTask
             // cmbx_department
             // 
             this.cmbx_department.FormattingEnabled = true;
-            this.cmbx_department.Location = new System.Drawing.Point(247, 296);
+            this.cmbx_department.Location = new System.Drawing.Point(208, 298);
             this.cmbx_department.Name = "cmbx_department";
             this.cmbx_department.Size = new System.Drawing.Size(100, 21);
             this.cmbx_department.TabIndex = 16;
-            this.cmbx_department.SelectedIndexChanged += new System.EventHandler(this.cmbx_department_SelectedIndexChanged);
             // 
             // cmbx_teamLeader
             // 
             this.cmbx_teamLeader.FormattingEnabled = true;
-            this.cmbx_teamLeader.Location = new System.Drawing.Point(247, 345);
+            this.cmbx_teamLeader.Location = new System.Drawing.Point(209, 345);
             this.cmbx_teamLeader.Name = "cmbx_teamLeader";
             this.cmbx_teamLeader.Size = new System.Drawing.Size(100, 21);
             this.cmbx_teamLeader.TabIndex = 17;
             // 
             // txt_NumHoursWork
             // 
-            this.txt_NumHoursWork.Location = new System.Drawing.Point(247, 232);
+            this.txt_NumHoursWork.Location = new System.Drawing.Point(208, 234);
             this.txt_NumHoursWork.Name = "txt_NumHoursWork";
             this.txt_NumHoursWork.Size = new System.Drawing.Size(100, 36);
             this.txt_NumHoursWork.TabIndex = 19;
@@ -181,30 +178,28 @@ namespace manageTask
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // lbl_confirmPass
+            // radWaitingBar2
             // 
-            this.lbl_confirmPass.Location = new System.Drawing.Point(115, 387);
-            this.lbl_confirmPass.Name = "lbl_confirmPass";
-            this.lbl_confirmPass.Size = new System.Drawing.Size(126, 21);
-            this.lbl_confirmPass.TabIndex = 22;
-            this.lbl_confirmPass.Text = "Confirm password";
-            this.lbl_confirmPass.ThemeName = "MaterialTeal";
+            this.radWaitingBar2.Location = new System.Drawing.Point(294, 398);
+            this.radWaitingBar2.Name = "radWaitingBar2";
+            this.radWaitingBar2.Size = new System.Drawing.Size(50, 47);
+            this.radWaitingBar2.TabIndex = 21;
+            this.radWaitingBar2.Text = "radWaitingBar2";
+            this.radWaitingBar2.WaitingIndicators.Add(this.dotsRingWaitingBarIndicatorElement1);
+            this.radWaitingBar2.WaitingSpeed = 50;
+            this.radWaitingBar2.WaitingStyle = Telerik.WinControls.Enumerations.WaitingBarStyles.DotsRing;
             // 
-            // txt_ConfirmPassword
+            // dotsRingWaitingBarIndicatorElement1
             // 
-            this.txt_ConfirmPassword.Location = new System.Drawing.Point(247, 372);
-            this.txt_ConfirmPassword.Name = "txt_ConfirmPassword";
-            this.txt_ConfirmPassword.Size = new System.Drawing.Size(100, 36);
-            this.txt_ConfirmPassword.TabIndex = 24;
-            this.txt_ConfirmPassword.ThemeName = "MaterialTeal";
+            this.dotsRingWaitingBarIndicatorElement1.ElementColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.dotsRingWaitingBarIndicatorElement1.Name = "dotsRingWaitingBarIndicatorElement1";
             // 
             // AddWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 498);
-            this.Controls.Add(this.txt_ConfirmPassword);
-            this.Controls.Add(this.lbl_confirmPass);
+            this.Controls.Add(this.radWaitingBar2);
             this.Controls.Add(this.txt_NumHoursWork);
             this.Controls.Add(this.cmbx_teamLeader);
             this.Controls.Add(this.cmbx_department);
@@ -238,8 +233,7 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.lbl_team_leader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NumHoursWork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_confirmPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ConfirmPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,7 +257,7 @@ namespace manageTask
         private Telerik.WinControls.Themes.MaterialTealTheme materialTealTheme1;
         private Telerik.WinControls.UI.RadSpinEditor txt_NumHoursWork;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private Telerik.WinControls.UI.RadTextBox txt_ConfirmPassword;
-        private Telerik.WinControls.UI.RadLabel lbl_confirmPass;
+        private Telerik.WinControls.UI.RadWaitingBar radWaitingBar2;
+        private Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement dotsRingWaitingBarIndicatorElement1;
     }
 }

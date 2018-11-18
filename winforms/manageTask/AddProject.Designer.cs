@@ -30,21 +30,20 @@ namespace manageTask
         {
             this.components = new System.ComponentModel.Container();
             this.gb_addProject = new Telerik.WinControls.UI.RadGroupBox();
-            this.radWaitingBar2 = new Telerik.WinControls.UI.RadWaitingBar();
-            this.dotsRingWaitingBarIndicatorElement3 = new Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement();
             this.cmbx_team_leader = new System.Windows.Forms.ComboBox();
             this.txt_numHourForProject = new Telerik.WinControls.UI.RadSpinEditor();
-            this.grbx_hours = new Telerik.WinControls.UI.RadGroupBox();
+            this.groupBox4 = new Telerik.WinControls.UI.RadGroupBox();
             this.txt_qa = new Telerik.WinControls.UI.RadSpinEditor();
             this.txt_development = new Telerik.WinControls.UI.RadSpinEditor();
             this.txt_ui = new Telerik.WinControls.UI.RadSpinEditor();
-            this.txt_UX = new Telerik.WinControls.UI.RadSpinEditor();
+            this.txt_ux = new Telerik.WinControls.UI.RadSpinEditor();
             this.lbl_ux = new Telerik.WinControls.UI.RadLabel();
             this.lbl_qa = new Telerik.WinControls.UI.RadLabel();
             this.lbl_development = new Telerik.WinControls.UI.RadLabel();
             this.lbl_ui = new Telerik.WinControls.UI.RadLabel();
             this.txt_DateEnd = new Telerik.WinControls.UI.RadDateTimePicker();
             this.txt_DateBegin = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.btn_add_project = new Telerik.WinControls.UI.RadButton();
             this.lbl_teamleaders = new Telerik.WinControls.UI.RadLabel();
             this.lbl_date_end = new Telerik.WinControls.UI.RadLabel();
             this.lbl_date_begin = new Telerik.WinControls.UI.RadLabel();
@@ -53,7 +52,6 @@ namespace manageTask
             this.txt_CustomerName = new Telerik.WinControls.UI.RadTextBox();
             this.txt_ProjectName = new Telerik.WinControls.UI.RadTextBox();
             this.lbl_name = new Telerik.WinControls.UI.RadLabel();
-            this.btn_add_project = new Telerik.WinControls.UI.RadButton();
             this.crystalTheme1 = new Telerik.WinControls.Themes.CrystalTheme();
             this.materialTealTheme1 = new Telerik.WinControls.Themes.MaterialTealTheme();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
@@ -61,22 +59,24 @@ namespace manageTask
             this.object_f11cc8fa_1117_4998_83da_e54637316c36 = new Telerik.WinControls.RootRadElement();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dotsRingWaitingBarIndicatorElement1 = new Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement();
+            this.radWaitingBar2 = new Telerik.WinControls.UI.RadWaitingBar();
+            this.dotsRingWaitingBarIndicatorElement3 = new Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement();
             ((System.ComponentModel.ISupportInitialize)(this.gb_addProject)).BeginInit();
             this.gb_addProject.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_numHourForProject)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grbx_hours)).BeginInit();
-            this.grbx_hours.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBox4)).BeginInit();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_qa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_development)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ui)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_UX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_ux)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_qa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_development)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_ui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateEnd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateBegin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_add_project)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_teamleaders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_date_end)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_date_begin)).BeginInit();
@@ -85,8 +85,8 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.txt_CustomerName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ProjectName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_name)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_add_project)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@ namespace manageTask
             this.gb_addProject.Controls.Add(this.radWaitingBar2);
             this.gb_addProject.Controls.Add(this.cmbx_team_leader);
             this.gb_addProject.Controls.Add(this.txt_numHourForProject);
-            this.gb_addProject.Controls.Add(this.grbx_hours);
+            this.gb_addProject.Controls.Add(this.groupBox4);
             this.gb_addProject.Controls.Add(this.txt_DateEnd);
             this.gb_addProject.Controls.Add(this.txt_DateBegin);
             this.gb_addProject.Controls.Add(this.lbl_teamleaders);
@@ -117,27 +117,6 @@ namespace manageTask
             this.gb_addProject.TabStop = false;
             this.gb_addProject.Text = "Add a new project";
             this.gb_addProject.ThemeName = "MaterialTeal";
-            // 
-            // radWaitingBar2
-            // 
-            this.radWaitingBar2.Location = new System.Drawing.Point(438, 562);
-            this.radWaitingBar2.Name = "radWaitingBar2";
-            this.radWaitingBar2.Size = new System.Drawing.Size(64, 41);
-            this.radWaitingBar2.TabIndex = 18;
-            this.radWaitingBar2.Text = "radWaitingBar2";
-            this.radWaitingBar2.WaitingIndicators.Add(this.dotsRingWaitingBarIndicatorElement3);
-            this.radWaitingBar2.WaitingSpeed = 50;
-            this.radWaitingBar2.WaitingStyle = Telerik.WinControls.Enumerations.WaitingBarStyles.DotsRing;
-            // 
-            // dotsRingWaitingBarIndicatorElement3
-            // 
-            this.dotsRingWaitingBarIndicatorElement3.DrawBackgroundImage = false;
-            this.dotsRingWaitingBarIndicatorElement3.DrawImage = false;
-            this.dotsRingWaitingBarIndicatorElement3.DrawText = false;
-            this.dotsRingWaitingBarIndicatorElement3.ElementColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.dotsRingWaitingBarIndicatorElement3.ElementGradientPercentage2 = 0.67F;
-            this.dotsRingWaitingBarIndicatorElement3.Name = "dotsRingWaitingBarIndicatorElement3";
-            this.dotsRingWaitingBarIndicatorElement3.SerializeChildren = false;
             // 
             // cmbx_team_leader
             // 
@@ -160,26 +139,26 @@ namespace manageTask
             this.txt_numHourForProject.TabIndex = 15;
             this.txt_numHourForProject.ThemeName = "MaterialTeal";
             // 
-            // grbx_hours
+            // groupBox4
             // 
-            this.grbx_hours.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.grbx_hours.Controls.Add(this.txt_qa);
-            this.grbx_hours.Controls.Add(this.txt_development);
-            this.grbx_hours.Controls.Add(this.txt_ui);
-            this.grbx_hours.Controls.Add(this.txt_UX);
-            this.grbx_hours.Controls.Add(this.lbl_ux);
-            this.grbx_hours.Controls.Add(this.lbl_qa);
-            this.grbx_hours.Controls.Add(this.lbl_development);
-            this.grbx_hours.Controls.Add(this.lbl_ui);
-            this.grbx_hours.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
-            this.grbx_hours.HeaderText = "hours for each department";
-            this.grbx_hours.Location = new System.Drawing.Point(122, 328);
-            this.grbx_hours.Name = "grbx_hours";
-            this.grbx_hours.Size = new System.Drawing.Size(334, 222);
-            this.grbx_hours.TabIndex = 14;
-            this.grbx_hours.TabStop = false;
-            this.grbx_hours.Text = "hours for each department";
-            this.grbx_hours.ThemeName = "MaterialTeal";
+            this.groupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.groupBox4.Controls.Add(this.txt_qa);
+            this.groupBox4.Controls.Add(this.txt_development);
+            this.groupBox4.Controls.Add(this.txt_ui);
+            this.groupBox4.Controls.Add(this.txt_ux);
+            this.groupBox4.Controls.Add(this.lbl_ux);
+            this.groupBox4.Controls.Add(this.lbl_qa);
+            this.groupBox4.Controls.Add(this.lbl_development);
+            this.groupBox4.Controls.Add(this.lbl_ui);
+            this.groupBox4.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            this.groupBox4.HeaderText = "hours for each department";
+            this.groupBox4.Location = new System.Drawing.Point(122, 328);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(334, 222);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "hours for each department";
+            this.groupBox4.ThemeName = "MaterialTeal";
             // 
             // txt_qa
             // 
@@ -220,18 +199,18 @@ namespace manageTask
             this.txt_ui.TabIndex = 8;
             this.txt_ui.ThemeName = "MaterialTeal";
             // 
-            // txt_UX
+            // txt_ux
             // 
-            this.txt_UX.Location = new System.Drawing.Point(169, 34);
-            this.txt_UX.Maximum = new decimal(new int[] {
+            this.txt_ux.Location = new System.Drawing.Point(169, 34);
+            this.txt_ux.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.txt_UX.Name = "txt_UX";
-            this.txt_UX.Size = new System.Drawing.Size(65, 36);
-            this.txt_UX.TabIndex = 7;
-            this.txt_UX.ThemeName = "MaterialTeal";
+            this.txt_ux.Name = "txt_ux";
+            this.txt_ux.Size = new System.Drawing.Size(65, 36);
+            this.txt_ux.TabIndex = 7;
+            this.txt_ux.ThemeName = "MaterialTeal";
             // 
             // lbl_ux
             // 
@@ -300,6 +279,16 @@ namespace manageTask
             ((Telerik.WinControls.UI.RadDateTimePickerElement)(this.txt_DateBegin.GetChildAt(0))).CalendarSize = new System.Drawing.Size(290, 320);
             ((Telerik.WinControls.UI.RadMaskedEditBoxElement)(this.txt_DateBegin.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Text = "ιεν ωπι 05 πεαξαψ 2018";
             ((Telerik.WinControls.UI.LightVisualButtonElement)(this.txt_DateBegin.GetChildAt(0).GetChildAt(2).GetChildAt(1).GetChildAt(3).GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // btn_add_project
+            // 
+            this.btn_add_project.Location = new System.Drawing.Point(398, 566);
+            this.btn_add_project.Name = "btn_add_project";
+            this.btn_add_project.Size = new System.Drawing.Size(146, 36);
+            this.btn_add_project.TabIndex = 12;
+            this.btn_add_project.Text = "Add project";
+            this.btn_add_project.ThemeName = "MaterialTeal";
+            this.btn_add_project.Click += new System.EventHandler(this.btn_add_project_Click);
             // 
             // lbl_teamleaders
             // 
@@ -371,16 +360,6 @@ namespace manageTask
             this.lbl_name.Text = "Name:";
             this.lbl_name.ThemeName = "MaterialTeal";
             // 
-            // btn_add_project
-            // 
-            this.btn_add_project.Location = new System.Drawing.Point(398, 566);
-            this.btn_add_project.Name = "btn_add_project";
-            this.btn_add_project.Size = new System.Drawing.Size(146, 36);
-            this.btn_add_project.TabIndex = 12;
-            this.btn_add_project.Text = "Add project";
-            this.btn_add_project.ThemeName = "MaterialTeal";
-            this.btn_add_project.Click += new System.EventHandler(this.btn_add_project_Click);
-            // 
             // object_f11cc8fa_1117_4998_83da_e54637316c36
             // 
             this.object_f11cc8fa_1117_4998_83da_e54637316c36.Name = "object_f11cc8fa_1117_4998_83da_e54637316c36";
@@ -395,6 +374,27 @@ namespace manageTask
             // 
             this.dotsRingWaitingBarIndicatorElement1.ElementColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.dotsRingWaitingBarIndicatorElement1.Name = "dotsRingWaitingBarIndicatorElement1";
+            // 
+            // radWaitingBar2
+            // 
+            this.radWaitingBar2.Location = new System.Drawing.Point(438, 562);
+            this.radWaitingBar2.Name = "radWaitingBar2";
+            this.radWaitingBar2.Size = new System.Drawing.Size(64, 41);
+            this.radWaitingBar2.TabIndex = 18;
+            this.radWaitingBar2.Text = "radWaitingBar2";
+            this.radWaitingBar2.WaitingIndicators.Add(this.dotsRingWaitingBarIndicatorElement3);
+            this.radWaitingBar2.WaitingSpeed = 50;
+            this.radWaitingBar2.WaitingStyle = Telerik.WinControls.Enumerations.WaitingBarStyles.DotsRing;
+            // 
+            // dotsRingWaitingBarIndicatorElement3
+            // 
+            this.dotsRingWaitingBarIndicatorElement3.DrawBackgroundImage = false;
+            this.dotsRingWaitingBarIndicatorElement3.DrawImage = false;
+            this.dotsRingWaitingBarIndicatorElement3.DrawText = false;
+            this.dotsRingWaitingBarIndicatorElement3.ElementColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.dotsRingWaitingBarIndicatorElement3.ElementGradientPercentage2 = 0.67F;
+            this.dotsRingWaitingBarIndicatorElement3.Name = "dotsRingWaitingBarIndicatorElement3";
+            this.dotsRingWaitingBarIndicatorElement3.SerializeChildren = false;
             // 
             // AddProject
             // 
@@ -415,21 +415,21 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.gb_addProject)).EndInit();
             this.gb_addProject.ResumeLayout(false);
             this.gb_addProject.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_numHourForProject)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grbx_hours)).EndInit();
-            this.grbx_hours.ResumeLayout(false);
-            this.grbx_hours.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBox4)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_qa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_development)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ui)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_UX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ux)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_ux)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_qa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_development)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_ui)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateEnd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateBegin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_add_project)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_teamleaders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_date_end)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_date_begin)).EndInit();
@@ -438,8 +438,8 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.txt_CustomerName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ProjectName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_name)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_add_project)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -449,11 +449,11 @@ namespace manageTask
 
         private Telerik.WinControls.UI.RadGroupBox gb_addProject;
         private Telerik.WinControls.UI.RadSpinEditor txt_numHourForProject;
-        private Telerik.WinControls.UI.RadGroupBox grbx_hours;
+        private Telerik.WinControls.UI.RadGroupBox groupBox4;
         private Telerik.WinControls.UI.RadSpinEditor txt_qa;
         private Telerik.WinControls.UI.RadSpinEditor txt_development;
         private Telerik.WinControls.UI.RadSpinEditor txt_ui;
-        private Telerik.WinControls.UI.RadSpinEditor txt_UX;
+        private Telerik.WinControls.UI.RadSpinEditor txt_ux;
         private Telerik.WinControls.UI.RadLabel lbl_ux;
         private Telerik.WinControls.UI.RadLabel lbl_qa;
         private Telerik.WinControls.UI.RadLabel lbl_development;
