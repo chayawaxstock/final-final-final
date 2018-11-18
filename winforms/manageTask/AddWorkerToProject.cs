@@ -22,17 +22,7 @@ namespace manageTask
         private void AddWorkerToProject_Load(object sender, EventArgs e)
         {
 
-            List<User> workers = UserRequests.getSimpleWorkers();
-            if (workers != null)
-            {
-                checkedListBoxWorkers.DisplayMember = "UserName";
-                foreach (User worker in workers)
-                {
-                    checkedListBoxWorkers.Items.Add(worker);
-                }
-
-
-            }
+           
             List<Project> projects = TaskRequests.getAllProjects();
             if (projects != null)
             {
@@ -44,16 +34,24 @@ namespace manageTask
 
         private void cmbx_projects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btn_addProjectToWorker.Visible = true;
+           int idPprojectSelect= (cmbx_projects.SelectedItem as Project).ProjectId;
+            List<User> workers = UserRequests.getWorkerNotInProject(idPprojectSelect);
+            if (workers != null)
+            {
+                checkedListBoxWorkers.DisplayMember = "UserName";
+                foreach (User worker in workers)
+                {
+                    checkedListBoxWorkers.Items.Add(worker);
+                }
+
+            }
         }
 
         private void btn_addProjectToWorker_Click(object sender, EventArgs e)
         {
             List<User> users = new List<User>();
             for (int i = 0; i < checkedListBoxWorkers.Items.Count; i++)
-            {
-               
-                    
+            {   
                 if (checkedListBoxWorkers.GetItemChecked(i))
                 {
                     users.Add((checkedListBoxWorkers.Items[i] as User));
@@ -64,6 +62,19 @@ namespace manageTask
             if (isSuccess)
                 MessageBox.Show("Success");
             else MessageBox.Show("ERROR!");
+        }
+
+        private void checkedListBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             btn_addProjectToWorker.Visible = true;
+        }
+
+        void radButtonRemoveFromWorker_Click(object sender, EventArgs e)
+        {
+            while (this.checkedListBoxWorkers.CheckedItems.Count > 0)
+            {
+                this.checkedListBoxWorkers.Items.Remove(this.checkedListBoxWorkers.CheckedItems[0]);
+            }
         }
     }
 }

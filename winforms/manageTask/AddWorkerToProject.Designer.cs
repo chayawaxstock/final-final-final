@@ -84,6 +84,7 @@ namespace manageTask
             this.checkedListBoxWorkers.Name = "checkedListBoxWorkers";
             this.checkedListBoxWorkers.Size = new System.Drawing.Size(182, 327);
             this.checkedListBoxWorkers.TabIndex = 7;
+            this.checkedListBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxWorkers_SelectedIndexChanged);
             // 
             // AddWorkerToProject
             // 
