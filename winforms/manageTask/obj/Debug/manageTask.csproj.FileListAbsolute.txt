@@ -1364,6 +1364,10 @@ C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.GraphHoursStatusCompanyWorker.resources
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.Login.resources
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.Main.resources
+<<<<<<< HEAD
+=======
+C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.b.resources
+>>>>>>> a5bf30ad1f3f8dde765047d8bdd735f1f161c5cd
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.ProjectDetails.resources
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.Properties.Resources.resources
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.RadRibbonForm1.resources
@@ -1379,4 +1383,7 @@ C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.csproj.CopyComplete
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.exe
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.pdb
+<<<<<<< HEAD
 C:\Users\seldat\Documents\GitHub\final-final-final\winforms\manageTask\obj\Debug\manageTask.Manager.resources
+=======
+>>>>>>> a5bf30ad1f3f8dde765047d8bdd735f1f161c5cd
