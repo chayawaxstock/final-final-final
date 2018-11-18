@@ -82,7 +82,7 @@ namespace manageTask.Logic
             public static List<Project> getAllProjects()
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/getAllProjects").Result;
             if (response.IsSuccessStatusCode)

@@ -75,6 +75,7 @@ namespace manageTask
             this.cmbx_projects.Name = "cmbx_projects";
             this.cmbx_projects.Size = new System.Drawing.Size(121, 21);
             this.cmbx_projects.TabIndex = 6;
+            this.cmbx_projects.SelectedIndexChanged += new System.EventHandler(this.cmbx_projects_SelectedIndexChanged);
             // 
             // checkedListBoxWorkers
             // 
