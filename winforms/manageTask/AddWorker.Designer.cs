@@ -29,7 +29,6 @@ namespace manageTask
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWorker));
             this.lbl_name = new Telerik.WinControls.UI.RadLabel();
             this.lbl_password = new Telerik.WinControls.UI.RadLabel();
             this.lbl_email = new Telerik.WinControls.UI.RadLabel();
@@ -47,7 +46,6 @@ namespace manageTask
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.radWaitingBar2 = new Telerik.WinControls.UI.RadWaitingBar();
             this.dotsRingWaitingBarIndicatorElement1 = new Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_email)).BeginInit();
@@ -61,7 +59,6 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.txt_NumHoursWork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,21 +194,11 @@ namespace manageTask
             this.dotsRingWaitingBarIndicatorElement1.ElementColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.dotsRingWaitingBarIndicatorElement1.Name = "dotsRingWaitingBarIndicatorElement1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(182, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
             // AddWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 498);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.radWaitingBar2);
             this.Controls.Add(this.txt_NumHoursWork);
             this.Controls.Add(this.cmbx_teamLeader);
@@ -247,7 +234,6 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.txt_NumHoursWork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -273,6 +259,5 @@ namespace manageTask
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Telerik.WinControls.UI.RadWaitingBar radWaitingBar2;
         private Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement dotsRingWaitingBarIndicatorElement1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

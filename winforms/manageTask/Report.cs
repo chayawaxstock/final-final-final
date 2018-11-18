@@ -76,7 +76,7 @@ namespace manageTask
 
             foreach (var item in reportProjects)
             { 
-                dt.Rows.Add(reportProjects);
+                dt.Rows.Add(item);
             }
             this.radGridView1.DataSource = dt;
             this.radGridView1.EnableFiltering = true;

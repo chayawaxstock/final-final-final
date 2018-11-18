@@ -37,12 +37,7 @@ namespace manageTask
             if (projects != null)
             {
                 cmbx_projects.DisplayMember = "ProjectName";
-                foreach (Project project in projects)
-                {
-                    cmbx_projects.Items.Add(project);
-                }
-
-
+                cmbx_projects.Items.AddRange(projects.ToArray());
             }
         }
 

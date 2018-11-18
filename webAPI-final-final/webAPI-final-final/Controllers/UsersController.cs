@@ -76,12 +76,8 @@ namespace webAPI_tasks.Controllers
         [Route("api/Users/getWorkers")]
         public HttpResponseMessage getWorkers()
         {
-
-            return new HttpResponseMessage(HttpStatusCode.OK)
-            {
-
-                Content = new ObjectContent<List<UserWithoutPassword>>(LogicManager.getWorkers(), new JsonMediaTypeFormatter())
-            };
+          return  Request.CreateResponse(HttpStatusCode.OK, LogicManager.getWorkers());
+          
         }
 
 
