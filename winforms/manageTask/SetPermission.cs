@@ -59,6 +59,11 @@ namespace manageTask
 
         private void cmbx_permission_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btn_set_permission.Enabled = true;
+        }
+
+        private void btn_set_permission_Click(object sender, EventArgs e)
+        {
             User userToUpdate = new User();
             int userId = (cmbx_workers.SelectedItem as User).UserId;
             var confirmResult = MessageBox.Show($"Are you sure you want to change the permission to {(cmbx_permission.SelectedItem as DepartmentUser).Department}??",

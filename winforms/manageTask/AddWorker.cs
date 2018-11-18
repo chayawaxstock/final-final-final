@@ -27,12 +27,12 @@ namespace manageTask
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
             User worker = getWorker();
             if (ModelState.IsValid(worker))
             {
-                radWaitingBar2.Show();
-                radWaitingBar2.StartWaiting();
+                //radWaitingBar2.Show();
+                //radWaitingBar2.StartWaiting();
 
                 //add worker to db
                 if (TaskRequests.addWorker(worker))
@@ -48,14 +48,16 @@ namespace manageTask
                     RadMessageBox.Show("error add project", "error", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1);
                 }
                 
-                radWaitingBar2.StopWaiting();
-                radWaitingBar2.Hide();
+                //radWaitingBar2.StopWaiting();
+                //radWaitingBar2.Hide();
             }
             else
             {
                 //model invalid set error
                 foreach (var item in ModelState.Results)
                 {
+
+                  
                     errorProvider1.SetError(Controls["txt_" + item.MemberNames.ToList()[0]], item.ErrorMessage);
                 }
             }
@@ -68,6 +70,7 @@ namespace manageTask
 
             //convert password to sha256
             worker.Password = UserLogic.passwordToSHA(txt_Password.Text);
+            worker.ConfirmPassword= UserLogic.passwordToSHA(txt_ConfirmPassword.Text);
             worker.NumHoursWork = txt_NumHoursWork.Value;
             worker.Email = txt_Email.Text;
             worker.DepartmentId = (cmbx_department.SelectedItem as DepartmentUser).Id;

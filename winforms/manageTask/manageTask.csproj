@@ -283,6 +283,7 @@
     <Compile Include="UserProfil.Designer.cs">
       <DependentUpon>UserProfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validations\ConfirmPasswordAttribute.cs" />
     <Compile Include="Validations\UniqueEmailAttribute.cs" />
     <Compile Include="Validations\UniquePasswordAttribute.cs" />
     <Compile Include="Validations\ValidDateTimeBeginAttribute.cs" />

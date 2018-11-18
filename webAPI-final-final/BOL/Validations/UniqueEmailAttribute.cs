@@ -3,7 +3,6 @@ using BOL.HelpModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -23,7 +22,7 @@ namespace BOL.Validations
                 string email = value.ToString();
 
                 //Invoke method 'getAllUsers' from 'UserService' in 'BLL project' by reflection (not by adding reference!)
-               
+
                 //1. Load 'BLL' project
                 Assembly assembly = Assembly.LoadFrom(@"C:\Users\seldat\Documents\GitHub\final-final-final\webAPI-final-final\BLL\bin\Debug\BLL.dll");
 

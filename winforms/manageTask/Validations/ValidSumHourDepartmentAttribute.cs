@@ -18,7 +18,7 @@ namespace manageTask.Validations
             decimal hours = (value as List<HourForDepartment>).Sum(p=>p.SumHours);
             if ((validationContext.ObjectInstance as Project).numHourForProject>=hours)
                  return null;
-            return new ValidationResult("sum hours departments greater than hours for project", new List<string>() { "ux" });
+            return new ValidationResult("sum hours departments greater than hours for project", new List<string>() { "UX" });
         }
     }
 }

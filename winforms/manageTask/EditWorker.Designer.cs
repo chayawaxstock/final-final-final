@@ -30,6 +30,8 @@ namespace manageTask
         {
             this.lbl_worker_name = new Telerik.WinControls.UI.RadLabel();
             this.grpb_details = new Telerik.WinControls.UI.RadGroupBox();
+            this.cmbx_department = new System.Windows.Forms.ComboBox();
+            this.cmbx_teamleader = new System.Windows.Forms.ComboBox();
             this.lbl_department = new Telerik.WinControls.UI.RadLabel();
             this.lbl_teamleader = new Telerik.WinControls.UI.RadLabel();
             this.btn_edit = new Telerik.WinControls.UI.RadButton();
@@ -41,8 +43,6 @@ namespace manageTask
             this.label1 = new Telerik.WinControls.UI.RadLabel();
             this.cmbx_workers = new System.Windows.Forms.ComboBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.cmbx_teamleader = new System.Windows.Forms.ComboBox();
-            this.cmbx_department = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_worker_name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpb_details)).BeginInit();
             this.grpb_details.SuspendLayout();
@@ -89,6 +89,22 @@ namespace manageTask
             this.grpb_details.Text = "Worker\'s details";
             this.grpb_details.Visible = false;
             // 
+            // cmbx_department
+            // 
+            this.cmbx_department.FormattingEnabled = true;
+            this.cmbx_department.Location = new System.Drawing.Point(121, 236);
+            this.cmbx_department.Name = "cmbx_department";
+            this.cmbx_department.Size = new System.Drawing.Size(83, 21);
+            this.cmbx_department.TabIndex = 12;
+            // 
+            // cmbx_teamleader
+            // 
+            this.cmbx_teamleader.FormattingEnabled = true;
+            this.cmbx_teamleader.Location = new System.Drawing.Point(121, 199);
+            this.cmbx_teamleader.Name = "cmbx_teamleader";
+            this.cmbx_teamleader.Size = new System.Drawing.Size(83, 21);
+            this.cmbx_teamleader.TabIndex = 11;
+            // 
             // lbl_department
             // 
             this.lbl_department.Location = new System.Drawing.Point(37, 236);
@@ -112,6 +128,7 @@ namespace manageTask
             this.btn_edit.Size = new System.Drawing.Size(75, 23);
             this.btn_edit.TabIndex = 5;
             this.btn_edit.Text = "Edit";
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // numeric_num_hours_work
             // 
@@ -165,22 +182,7 @@ namespace manageTask
             this.cmbx_workers.Name = "cmbx_workers";
             this.cmbx_workers.Size = new System.Drawing.Size(121, 21);
             this.cmbx_workers.TabIndex = 3;
-            // 
-            // cmbx_teamleader
-            // 
-            this.cmbx_teamleader.FormattingEnabled = true;
-            this.cmbx_teamleader.Location = new System.Drawing.Point(121, 199);
-            this.cmbx_teamleader.Name = "cmbx_teamleader";
-            this.cmbx_teamleader.Size = new System.Drawing.Size(83, 21);
-            this.cmbx_teamleader.TabIndex = 11;
-            // 
-            // cmbx_department
-            // 
-            this.cmbx_department.FormattingEnabled = true;
-            this.cmbx_department.Location = new System.Drawing.Point(121, 236);
-            this.cmbx_department.Name = "cmbx_department";
-            this.cmbx_department.Size = new System.Drawing.Size(83, 21);
-            this.cmbx_department.TabIndex = 12;
+            this.cmbx_workers.SelectedIndexChanged += new System.EventHandler(this.cmbx_workers_SelectedIndexChanged_1);
             // 
             // EditWorker
             // 
