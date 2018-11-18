@@ -37,7 +37,8 @@ namespace manageTask
 
         }
 
-        private void cmbx_workers_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void btn_delete_Click(object sender, EventArgs e)
         {
             int userId = (cmbx_workers.SelectedItem as User).UserId;
             var confirmResult = MessageBox.Show("Are you sure to delete this item ??",

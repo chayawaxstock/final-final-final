@@ -34,9 +34,11 @@ namespace manageTask
             this.cmbx_workers = new System.Windows.Forms.ComboBox();
             this.cmbx_permission = new System.Windows.Forms.ComboBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.btn_set_permission = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.label1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.label2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_permission)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_set_permission)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,12 +81,24 @@ namespace manageTask
             this.cmbx_permission.Name = "cmbx_permission";
             this.cmbx_permission.Size = new System.Drawing.Size(121, 21);
             this.cmbx_permission.TabIndex = 6;
+            this.cmbx_permission.SelectedIndexChanged += new System.EventHandler(this.cmbx_permission_SelectedIndexChanged);
+            // 
+            // btn_set_permission
+            // 
+            this.btn_set_permission.Enabled = false;
+            this.btn_set_permission.Location = new System.Drawing.Point(345, 218);
+            this.btn_set_permission.Name = "btn_set_permission";
+            this.btn_set_permission.Size = new System.Drawing.Size(110, 24);
+            this.btn_set_permission.TabIndex = 7;
+            this.btn_set_permission.Text = "Set permission";
+            this.btn_set_permission.Click += new System.EventHandler(this.btn_set_permission_Click);
             // 
             // SetPermission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_set_permission);
             this.Controls.Add(this.cmbx_permission);
             this.Controls.Add(this.cmbx_workers);
             this.Controls.Add(this.lbl_permission);
@@ -100,6 +114,7 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.label1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.label2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_permission)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_set_permission)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,5 +128,6 @@ namespace manageTask
         private System.Windows.Forms.ComboBox cmbx_workers;
         private System.Windows.Forms.ComboBox cmbx_permission;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private Telerik.WinControls.UI.RadButton btn_set_permission;
     }
 }

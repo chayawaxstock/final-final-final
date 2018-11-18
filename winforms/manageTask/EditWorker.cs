@@ -64,24 +64,7 @@ namespace manageTask
 
         }
 
-        private void cmbx_workers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string teamleaderName;
-            grpb_details.Visible = true;
-            txt_name.Text = (cmbx_workers.SelectedItem as User).UserName;
-            txt_email.Text = (cmbx_workers.SelectedItem as User).Email;
-            numeric_num_hours_work.Value = (cmbx_workers.SelectedItem as User).NumHoursWork;
-            cmbx_department.Text = (cmbx_workers.SelectedItem as User).DepartmentUser.Department;
-            foreach (User item in cmbx_teamleader.Items)
-            {
-                if (item.UserId == (cmbx_workers.SelectedItem as User).ManagerId)
-                {
-                    teamleaderName = item.UserName;
-                    cmbx_teamleader.Text = teamleaderName;
-                }
-            }
 
-        }
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
@@ -122,6 +105,22 @@ namespace manageTask
 
         }
 
-
+        private void cmbx_workers_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            string teamleaderName;
+            grpb_details.Visible = true;
+            txt_name.Text = (cmbx_workers.SelectedItem as User).UserName;
+            txt_email.Text = (cmbx_workers.SelectedItem as User).Email;
+            numeric_num_hours_work.Value = (cmbx_workers.SelectedItem as User).NumHoursWork;
+            cmbx_department.Text = (cmbx_workers.SelectedItem as User).DepartmentUser.Department;
+            foreach (User item in cmbx_teamleader.Items)
+            {
+                if (item.UserId == (cmbx_workers.SelectedItem as User).ManagerId)
+                {
+                    teamleaderName = item.UserName;
+                    cmbx_teamleader.Text = teamleaderName;
+                }
+            }
+        }
     }
 }
