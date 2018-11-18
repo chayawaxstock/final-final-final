@@ -76,7 +76,7 @@ namespace webAPI_tasks.Controllers
         [Route("api/Users/getWorkers")]
         public HttpResponseMessage getWorkers()
         {
-          return  Request.CreateResponse(HttpStatusCode.BadRequest, LogicManager.getWorkers());
+          return  Request.CreateResponse(HttpStatusCode.OK, LogicManager.getWorkers());
           
         }
 
