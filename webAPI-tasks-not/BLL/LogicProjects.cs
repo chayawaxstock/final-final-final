@@ -2,6 +2,7 @@
 using BOL;
 using BOL.Convertors;
 using BOL.HelpModel;
+using BOL.Models;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -269,9 +270,20 @@ namespace BLL
                 }
                 return reportProject;
             };
+            List<ReportProject> reportProjects = DBAccess.RunReader(func, "report", new List<string>() { viewName }, new List<string>() { "viewName" });
+            foreach (var item in reportProjects)
+            {
+                item.Project.workers = new List<UserWithoutPassword>();
+                List<ProjectWorker> workerInProject = LogicManager.getUsersBelongProjects(item.Project.ProjectId);
+                var workerInProjectGroup = workerInProject.GroupBy(p => p.User.DepartmentId);
 
-           
-            return (DBAccess.RunReader(func, "report", new List<string>() { viewName }, new List<string>() {  "viewName" }));
+                foreach (var departmentWorkers in workerInProjectGroup)
+                {
+                    item.DepartmentUser.Add(new DepartmentUser() { Id = departmentWorkers.Key, Users = departmentWorkers.Select(p => p.User).ToList(),Department=departmentWorkers.First().User.DepartmentUser.Department });
+                }
+            }
+
+            return reportProjects;
         }
 
       
