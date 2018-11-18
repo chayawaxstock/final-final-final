@@ -28,26 +28,23 @@ namespace manageTask
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             this.lbl_worker = new Telerik.WinControls.UI.RadLabel();
             this.lbl_project = new Telerik.WinControls.UI.RadLabel();
             this.btn_addProjectToWorker = new Telerik.WinControls.UI.RadButton();
+            this.cmbx_projects = new System.Windows.Forms.ComboBox();
+            this.checkedListBoxWorkers = new System.Windows.Forms.CheckedListBox();
             this.materialTealTheme1 = new Telerik.WinControls.Themes.MaterialTealTheme();
-            this.btn_checkAll = new Telerik.WinControls.UI.RadButton();
-            this.checkedListBoxWorkers = new Telerik.WinControls.UI.RadCheckedListBox();
-            this.DropDownListProject = new Telerik.WinControls.UI.RadDropDownList();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_worker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_project)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_addProjectToWorker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_checkAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxWorkers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DropDownListProject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_worker
             // 
-            this.lbl_worker.Location = new System.Drawing.Point(348, 24);
+            this.lbl_worker.Location = new System.Drawing.Point(29, 59);
             this.lbl_worker.Name = "lbl_worker";
             this.lbl_worker.Size = new System.Drawing.Size(61, 21);
             this.lbl_worker.TabIndex = 1;
@@ -65,31 +62,29 @@ namespace manageTask
             // 
             // btn_addProjectToWorker
             // 
-            this.btn_addProjectToWorker.Location = new System.Drawing.Point(551, 406);
+            this.btn_addProjectToWorker.Location = new System.Drawing.Point(287, 410);
             this.btn_addProjectToWorker.Name = "btn_addProjectToWorker";
             this.btn_addProjectToWorker.Size = new System.Drawing.Size(236, 36);
             this.btn_addProjectToWorker.TabIndex = 4;
             this.btn_addProjectToWorker.Text = "Add the project to the worker";
             this.btn_addProjectToWorker.ThemeName = "MaterialTeal";
             this.btn_addProjectToWorker.Visible = false;
-            this.btn_addProjectToWorker.Click += new System.EventHandler(this.btn_addProjectToWorker_Click);
             // 
-            // btn_checkAll
+            // cmbx_projects
             // 
-            this.btn_checkAll.Location = new System.Drawing.Point(351, 356);
-            this.btn_checkAll.Name = "btn_checkAll";
-            this.btn_checkAll.Size = new System.Drawing.Size(115, 41);
-            this.btn_checkAll.TabIndex = 8;
-            this.btn_checkAll.Text = "Check all";
-            this.btn_checkAll.ThemeName = "MaterialTeal";
-            this.btn_checkAll.Click += new System.EventHandler(this.btn_checkAll_Click);
+            this.cmbx_projects.FormattingEnabled = true;
+            this.cmbx_projects.Location = new System.Drawing.Point(90, 24);
+            this.cmbx_projects.Name = "cmbx_projects";
+            this.cmbx_projects.Size = new System.Drawing.Size(121, 21);
+            this.cmbx_projects.TabIndex = 6;
+            this.cmbx_projects.SelectedIndexChanged += new System.EventHandler(this.cmbx_projects_SelectedIndexChanged);
             // 
             // checkedListBoxWorkers
             // 
-            this.checkedListBoxWorkers.GroupItemSize = new System.Drawing.Size(200, 36);
-            this.checkedListBoxWorkers.ItemSize = new System.Drawing.Size(200, 36);
-            this.checkedListBoxWorkers.Location = new System.Drawing.Point(348, 51);
+            this.checkedListBoxWorkers.FormattingEnabled = true;
+            this.checkedListBoxWorkers.Location = new System.Drawing.Point(29, 83);
             this.checkedListBoxWorkers.Name = "checkedListBoxWorkers";
+<<<<<<< HEAD
             this.checkedListBoxWorkers.Size = new System.Drawing.Size(182, 289);
             this.checkedListBoxWorkers.TabIndex = 9;
             this.checkedListBoxWorkers.ThemeName = "MaterialTeal";
@@ -106,15 +101,28 @@ namespace manageTask
             this.DropDownListProject.TabIndex = 10;
             this.DropDownListProject.ThemeName = "MaterialTeal";
             this.DropDownListProject.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.DropDownListProject_SelectedIndexChanged);
+=======
+            this.checkedListBoxWorkers.Size = new System.Drawing.Size(216, 289);
+            this.checkedListBoxWorkers.TabIndex = 7;
+            this.checkedListBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxWorkers_SelectedIndexChanged);
+            // 
+            // radButton1
+            // 
+            this.radButton1.Location = new System.Drawing.Point(29, 378);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(108, 29);
+            this.radButton1.TabIndex = 8;
+            this.radButton1.Text = "radButton1";
+>>>>>>> ae5ed1a4e5bfa890fc342e9e4214f82fce371fec
             // 
             // AddWorkerToProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 477);
-            this.Controls.Add(this.DropDownListProject);
+            this.Controls.Add(this.radButton1);
             this.Controls.Add(this.checkedListBoxWorkers);
-            this.Controls.Add(this.btn_checkAll);
+            this.Controls.Add(this.cmbx_projects);
             this.Controls.Add(this.btn_addProjectToWorker);
             this.Controls.Add(this.lbl_project);
             this.Controls.Add(this.lbl_worker);
@@ -129,9 +137,7 @@ namespace manageTask
             ((System.ComponentModel.ISupportInitialize)(this.lbl_worker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_project)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_addProjectToWorker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_checkAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxWorkers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DropDownListProject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,9 +148,9 @@ namespace manageTask
         private Telerik.WinControls.UI.RadLabel lbl_worker;
         private Telerik.WinControls.UI.RadLabel lbl_project;
         private Telerik.WinControls.UI.RadButton btn_addProjectToWorker;
+        private System.Windows.Forms.ComboBox cmbx_projects;
+        private System.Windows.Forms.CheckedListBox checkedListBoxWorkers;
         private Telerik.WinControls.Themes.MaterialTealTheme materialTealTheme1;
-        private Telerik.WinControls.UI.RadButton btn_checkAll;
-        private Telerik.WinControls.UI.RadCheckedListBox checkedListBoxWorkers;
-        private Telerik.WinControls.UI.RadDropDownList DropDownListProject;
+        private Telerik.WinControls.UI.RadButton radButton1;
     }
 }
