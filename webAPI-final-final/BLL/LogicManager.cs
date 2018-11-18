@@ -90,9 +90,9 @@ namespace BLL
 
         
 
-        public static List<SumHoursDoneUser> getSumHoursDoneForUsers(int teamleaderId)
+        public static List<SumHoursDoneUser> getSumHoursDoneForUsers(int teamleaderId,int projectId)
         {
-            string query = $"select sum(sumHours),u.userName from presentday p join user u on u.id= p.id where u.managerId ={teamleaderId} group by u.id";
+            string query = $"select sum(sumHours),u.userName from presentday p join user u on u.id= p.id where u.managerId ={teamleaderId} and projectId={projectId} group by u.id";
 
             Func<MySqlDataReader, List<SumHoursDoneUser>> func = (reader) =>
             {

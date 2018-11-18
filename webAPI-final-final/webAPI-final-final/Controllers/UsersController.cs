@@ -50,10 +50,10 @@ namespace webAPI_tasks.Controllers
 
         }
         [HttpGet]
-        [Route("api/Users/getSumHoursDoneForUsers/{teamleaderId}")]
-        public HttpResponseMessage getSumHoursDoneForUsers(int teamleaderId)
+        [Route("api/Users/getSumHoursDoneForUsers/{teamleaderId}/{projectId}")]
+        public HttpResponseMessage getSumHoursDoneForUsers(int teamleaderId,int projectId)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, LogicManager.getSumHoursDoneForUsers(teamleaderId));
+            return Request.CreateResponse(HttpStatusCode.OK, LogicManager.getSumHoursDoneForUsers(teamleaderId, projectId));
 
         }
         [HttpGet]

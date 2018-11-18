@@ -37,3 +37,14 @@ C:\Users\seldat\Documents\GitHub\final-final-final\webAPI-final-final\DAL\obj\De
 C:\Users\seldat\Documents\GitHub\final-final-final\webAPI-final-final\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\seldat\Documents\GitHub\final-final-final\webAPI-final-final\DAL\obj\Debug\DAL.dll
 C:\Users\seldat\Documents\GitHub\final-final-final\webAPI-final-final\DAL\obj\Debug\DAL.pdb
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\DAL.dll
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\DAL.pdb
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\Google.Protobuf.xml
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\MySql.Data.xml
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\System.Web.Http.xml
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\bin\Debug\System.Web.Http.Cors.xml
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\obj\Debug\DAL.dll
+C:\Users\user1\Documents\final-final-final\webAPI-final-final\DAL\obj\Debug\DAL.pdb

@@ -22,7 +22,7 @@ namespace BOL.Validations
                 //Invoke method 'getAllUsers' from 'UserService' in 'BLL project' by reflection (not by adding reference!)
 
                 //1. Load 'BLL' project
-                Assembly assembly = Assembly.LoadFrom(@"C:\Users\seldat\Documents\GitHub\final-final-final\webAPI-final-final\BLL\bin\Debug\BLL.dll");
+                Assembly assembly = Assembly.LoadFrom(@"C:\Users\user1\Documents\final-final-final\webAPI-final-final\BLL\bin\Debug\BLL.dll");
 
                 //2. Get 'UserService' type
                 Type userServiceType = assembly.GetTypes().First(t => t.Name.Equals("LogicProjects"));
