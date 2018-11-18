@@ -19,7 +19,7 @@ namespace manageTask
     public partial class Main : Telerik.WinControls.UI.RadForm
     {
         public static Login login = new Login();
-        public static b manager = new b();
+        public static Manager manager = new Manager();
         public static CompanyWorker companyWorker = new CompanyWorker();
         public static TeamLeader teamLeader = new TeamLeader();
         public void SetName(string name)
@@ -76,7 +76,7 @@ namespace manageTask
             string computerName = System.Environment.MachineName;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(@"http://localhost:61309/api/LoginByComputerUser");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/LoginByComputerUser");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))

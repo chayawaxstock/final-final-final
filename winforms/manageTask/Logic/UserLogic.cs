@@ -12,7 +12,7 @@ namespace manageTask.Logic
 {
     public class UserLogic
     {
-        public static b manager = new b();
+        public static Manager manager = new Manager();
         public static CompanyWorker companyWorker = new CompanyWorker();
         public static TeamLeader teamLeader = new TeamLeader();
         public static Main main = new Main();
@@ -22,7 +22,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(@"http://localhost:61309/api/addUser");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/addUser");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -59,7 +59,7 @@ namespace manageTask.Logic
 
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/Department/getAllDepartments").Result;
             if (response.IsSuccessStatusCode)
@@ -81,7 +81,7 @@ namespace manageTask.Logic
         public static List<User> getUserByDepartment(string department)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/Users/getUsersByDepartment/{department}").Result;
             if (response.IsSuccessStatusCode)
@@ -117,7 +117,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://localhost:61309/api/updateUser");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/updateUser");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "PUT";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -143,7 +143,7 @@ namespace manageTask.Logic
         public static List<User> getAllUsers()
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/Users/getAllUsers").Result;
             if (response.IsSuccessStatusCode)
@@ -164,7 +164,7 @@ namespace manageTask.Logic
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:61309/");
+                client.BaseAddress = new Uri($"{GlobalProp.URI}");
                 var response = client.DeleteAsync($"api/deleteUser/{userId}").Result;
                 return response;
             }
@@ -173,7 +173,7 @@ namespace manageTask.Logic
         public static List<ProjectWorker> getUserBelongProject(int projectId)
         {
             HttpClient client2 = new HttpClient();
-            client2.BaseAddress = new Uri(@"http://localhost:61309/");
+            client2.BaseAddress = new Uri($"{GlobalProp.URI}");
             client2.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response2 = client2.GetAsync($"api/Users/getUserBelongProject/{projectId}").Result;
             if (response2.IsSuccessStatusCode)
@@ -199,7 +199,7 @@ namespace manageTask.Logic
         public static List<SumHoursDoneUser> getSumHoursDoneForUsers()
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/Users/getSumHoursDoneForUsers/{GlobalProp.CurrentUser.UserId}").Result;
             if (response.IsSuccessStatusCode)
@@ -226,7 +226,7 @@ namespace manageTask.Logic
         public static List<User> getUsersOfTeamLeader(int teamLeaderId)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/Users/getUsersOfTeamLeader/{teamLeaderId}").Result;
             if (response.IsSuccessStatusCode)
@@ -254,7 +254,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://localhost:61309/api/updateProjectHours");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/updateProjectHours");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "PUT";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))

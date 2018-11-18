@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace manageTask
 {
-    public partial class b : Telerik.WinControls.UI.RadForm
+    public partial class Manager : Telerik.WinControls.UI.RadForm
     {
         List<string> teamLeaders = new List<string>();
         AddWorker addWorker = new AddWorker();
@@ -20,7 +20,7 @@ namespace manageTask
         AddProject addProject = new AddProject();
         //Reports reports = new Reports();
 
-        public b()
+        public Manager()
         {
 
             InitializeComponent();
@@ -102,54 +102,15 @@ namespace manageTask
         //    }
         //}
 
-        private void editWorkersDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            editWorker.MdiParent = this;
-            editWorker.Show();
-            editWorker.WindowState = FormWindowState.Maximized;
-        }
 
-        private void setPermissionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            setPermission.MdiParent = this;
-            setPermission.Show();
-            setPermission.WindowState = FormWindowState.Maximized;
-        }
 
-        private void deleteWorkerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            deleteWorker.MdiParent = this;
-            deleteWorker.Show();
-            deleteWorker.WindowState = FormWindowState.Maximized;
-        }
 
-        private void addANewWorkerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            addWorker.MdiParent = this;
-            addWorker.Show();
-            addWorker.WindowState = FormWindowState.Maximized;
-        }
 
-        private void addWorkerToProjectToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            addWorkerToProject.MdiParent = this;
-            addWorkerToProject.Show();
-            addWorkerToProject.WindowState = FormWindowState.Maximized;
-        }
+  
 
-        private void addProjectToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            addProject.MdiParent = this;
-            addProject.Show();
-            addProject.WindowState = FormWindowState.Maximized;
-        }
+  
 
-        private void addWorkerToATeamLeaderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            affiliationWorksToTeamLeader.MdiParent = this;
-            affiliationWorksToTeamLeader.Show();
-            affiliationWorksToTeamLeader.WindowState = FormWindowState.Maximized;
-        }
+
 
         private void RepotrsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -161,6 +122,55 @@ namespace manageTask
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void addProjectToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            addProject.MdiParent = this;
+            addProject.Show();
+            addProject.WindowState = FormWindowState.Maximized;
+        }
+
+        private void editWorkersDetailsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            editWorker.MdiParent = this;
+            editWorker.Show();
+            editWorker.WindowState = FormWindowState.Maximized;
+        }
+
+        private void setPermissionToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            setPermission.MdiParent = this;
+            setPermission.Show();
+            setPermission.WindowState = FormWindowState.Maximized;
+        }
+
+        private void deleteWorkerToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            deleteWorker.MdiParent = this;
+            deleteWorker.Show();
+            deleteWorker.WindowState = FormWindowState.Maximized;
+        }
+
+        private void addANewWorkerToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            addWorker.MdiParent = this;
+            addWorker.Show();
+            addWorker.WindowState = FormWindowState.Maximized;
+        }
+
+        private void addWorkerToProjectToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            addWorkerToProject.MdiParent = this;
+            addWorkerToProject.Show();
+            addWorkerToProject.WindowState = FormWindowState.Maximized;
+        }
+
+        private void addWorkerToATeamLeaderToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            affiliationWorksToTeamLeader.MdiParent = this;
+            affiliationWorksToTeamLeader.Show();
+            affiliationWorksToTeamLeader.WindowState = FormWindowState.Maximized;
         }
 
 

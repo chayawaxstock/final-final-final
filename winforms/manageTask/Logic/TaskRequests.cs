@@ -19,7 +19,7 @@ namespace manageTask.Logic
         {
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/Users/getHoursAndProjectForUser/{userId}").Result;
             if (response.IsSuccessStatusCode)
@@ -40,7 +40,7 @@ namespace manageTask.Logic
         public static List<ProjectWorker> getProjectsById(int userId)
         {
             HttpClient client2 = new HttpClient();
-            client2.BaseAddress = new Uri(@"http://localhost:61309/");
+            client2.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client2.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response2 = client2.GetAsync($"api/getProjectsById/{GlobalProp.CurrentUser.UserId}").Result;
             if (response2.IsSuccessStatusCode)
@@ -61,7 +61,7 @@ namespace manageTask.Logic
         public static List<Project> getProjectsManager(int userId)
         {
             HttpClient client2 = new HttpClient();
-            client2.BaseAddress = new Uri(@"http://localhost:61309/");
+            client2.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client2.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response2 = client2.GetAsync($"api/getProjectsManager/{GlobalProp.CurrentUser.UserId}").Result;
             if (response2.IsSuccessStatusCode)
@@ -82,7 +82,7 @@ namespace manageTask.Logic
             public static List<Project> getAllProjects()
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(@"http://localhost:61309/");
+            client.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync($"api/getAllProjects").Result;
             if (response.IsSuccessStatusCode)
@@ -106,7 +106,7 @@ namespace manageTask.Logic
         {
 
             HttpClient client3 = new HttpClient();
-            client3.BaseAddress = new Uri(@"http://localhost:61309/");
+            client3.BaseAddress = new Uri($@"{GlobalProp.URI}");
             client3.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response3 = client3.GetAsync($"api/Users/getHoursForUserProjects/{GlobalProp.CurrentUser.UserId}").Result;
             if (response3.IsSuccessStatusCode)
@@ -141,7 +141,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(@"http://localhost:61309/api/Projects");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/Projects");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -178,7 +178,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(@"http://localhost:61309/api/addUser");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/addUser");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
