@@ -14,6 +14,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls;
 
 namespace manageTask
 {
@@ -33,7 +34,6 @@ namespace manageTask
 
         private void AffiliationWorksToTeamLeader_Load_1(object sender, EventArgs e)
         {
-
             List<User> workers = UserRequests.getSimpleWorkers();
             if (workers != null)
             {
@@ -42,8 +42,6 @@ namespace manageTask
                 {
                     cmbx_worker.Items.Add(worker);
                 }
-
-
             }
 
         }
@@ -60,10 +58,8 @@ namespace manageTask
             if (teamLeaders != null)
             {
                 cmbx_team.DisplayMember = "UserName";
-
                 foreach (User user in teamLeaders)
                 {
-
                     cmbx_team.Items.Add(user);
                 }
             }
@@ -78,14 +74,14 @@ namespace manageTask
             User editUser = new User();
             editUser = (cmbx_worker.SelectedItem as User);
             editUser.ManagerId = (cmbx_team.SelectedItem as User).UserId;
-            editUser.Password = UserLogic.passwordToSHA("example string");
-
             try
             {
-
                 var httpResponse = UserLogic.updateUser(editUser);
                 if (httpResponse.StatusDescription == "OK")
-                    MessageBox.Show("Success");
+                {
+                    RadMessageBox.SetThemeName("MaterialTeal");
+                    RadMessageBox.Show("sucsess", "error", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1);
+                }
                 else MessageBox.Show("ERROR!");
 
             }

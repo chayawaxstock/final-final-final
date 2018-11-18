@@ -129,9 +129,6 @@ namespace manageTask.Logic
                 }
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 return httpResponse;
-
-
-
             }
             catch (Exception ex)
             {

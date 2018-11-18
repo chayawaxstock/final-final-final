@@ -93,7 +93,6 @@ namespace manageTask
             this.checkedListBoxWorkers.Size = new System.Drawing.Size(182, 289);
             this.checkedListBoxWorkers.TabIndex = 9;
             this.checkedListBoxWorkers.ThemeName = "MaterialTeal";
-         
             this.checkedListBoxWorkers.ItemCheckedChanged += new Telerik.WinControls.UI.ListViewItemEventHandler(this.checkedListBoxWorkers_ItemCheckedChanged);
             // 
             // DropDownListProject
