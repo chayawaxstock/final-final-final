@@ -3,6 +3,7 @@ using BOL.HelpModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -22,9 +23,9 @@ namespace BOL.Validations
                 string email = value.ToString();
 
                 //Invoke method 'getAllUsers' from 'UserService' in 'BLL project' by reflection (not by adding reference!)
-
+               
                 //1. Load 'BLL' project
-                Assembly assembly = Assembly.LoadFrom(@"C:\Users\user1\Desktop\final-project-seldat\manageTasks\webAPI-tasks\BLL\bin\Debug\BLL.dll");
+                Assembly assembly = Assembly.LoadFrom(@"C:\Users\seldat\Documents\GitHub\final-final-final\webAPI-final-final\BLL\bin\Debug\BLL.dll");
 
                 //2. Get 'UserService' type
                 Type userServiceType = assembly.GetTypes().First(t => t.Name.Equals("LogicManager"));
