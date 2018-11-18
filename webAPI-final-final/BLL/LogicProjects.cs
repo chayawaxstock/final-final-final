@@ -279,8 +279,7 @@ namespace BLL
 
                 foreach (var departmentWorkers in workerInProjectGroup)
                 {
-                    DepartmentUser d = new DepartmentUser() { Id = departmentWorkers.Key, Users = departmentWorkers.Select(p => p.User).ToList() };
-                    item.DepartmentUser.Add(d);
+                    item.DepartmentUser.Add(new HourDepartmentProject());
                 }
             }
 

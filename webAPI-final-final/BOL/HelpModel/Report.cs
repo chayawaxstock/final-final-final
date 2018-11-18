@@ -18,7 +18,7 @@ namespace BOL.HelpModel
         public decimal presentDoing { get; set; }
         public decimal NumHourDoDaysWorker { get; set; }
 
-        public List<DepartmentUser> DepartmentUser { get; set; } = new List<DepartmentUser>();
+        public List<HourDepartmentProject> DepartmentUser { get; set; } = new List<HourDepartmentProject>();
 
     }
 }

@@ -81,6 +81,8 @@
     <Compile Include="Fillters\ApiAuthenticationFilter.cs" />
     <Compile Include="Fillters\BasicAuthenticationIdentity.cs" />
     <Compile Include="Fillters\GenericAuthenticationFilter.cs" />
+    <Compile Include="HelpModel\HourDepartmentProject.cs" />
+    <Compile Include="HelpModel\HoursWorker.cs" />
     <Compile Include="HelpModel\LoginUser.cs" />
     <Compile Include="HelpModel\Report.cs" />
     <Compile Include="HelpModel\ReportWorker.cs" />
