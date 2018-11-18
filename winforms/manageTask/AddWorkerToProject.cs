@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls;
+using Telerik.WinControls.Enumerations;
+using Telerik.WinControls.UI;
 
 namespace manageTask
 {
@@ -22,92 +25,21 @@ namespace manageTask
         private void AddWorkerToProject_Load(object sender, EventArgs e)
         {
 
-           
+
             List<Project> projects = TaskRequests.getAllProjects();
             if (projects != null)
             {
-<<<<<<< HEAD
-               DropDownListProject.DisplayMember = "ProjectName";
+
+                cmbx_projects.DisplayMember = "ProjectName";
                 foreach (var item in projects)
                 {
-                    DropDownListProject.Items.Add(getItemProject(item));
+                    cmbx_projects.Items.Add(getItemProject(item));
                 }
             }
         }
 
-        private void btn_addProjectToWorker_Click(object sender, EventArgs e)
-        {
-            List<User> users = new List<User>();
-            var workersAdd = checkedListBoxWorkers.SelectedItems.Select(p=>p.Tag).ToList();
-            foreach (var item in workersAdd)
-            {
-                users.Add(item as User);
-            }
-            bool isSuccess = UserRequests.addWorkerToProject((DropDownListProject.SelectedItem.Tag as Project).ProjectId, users);
-            if (isSuccess)
-            {
-                RadMessageBox.SetThemeName("MaterialTeal");
-                RadMessageBox.Show("sucsses add project", "ok", MessageBoxButtons.OK, RadMessageIcon.None, MessageBoxDefaultButton.Button1);
-            }
 
-            else {
-                RadMessageBox.SetThemeName("MaterialTeal");
-                RadMessageBox.Show("error add workers to project", "error", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1);
-            } 
-        }
-
-        private void checkedListBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-             btn_addProjectToWorker.Visible = true;
-        }
-
-        void radButtonRemoveFromWorker_Click(object sender, EventArgs e)
-        {
-            while (this.checkedListBoxWorkers.CheckedItems.Count > 0)
-            {
-                this.checkedListBoxWorkers.Items.Remove(this.checkedListBoxWorkers.CheckedItems[0]);
-=======
-                cmbx_projects.DisplayMember = "ProjectName";
-                cmbx_projects.Items.AddRange(projects.ToArray());
-            }
-        }
-
-
-        private void cmbx_projects_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           int idPprojectSelect= (cmbx_projects.SelectedItem as Project).ProjectId;
-            List<User> workers = UserRequests.getWorkerNotInProject(idPprojectSelect);
-            if (workers != null)
-            {
-                checkedListBoxWorkers.DisplayMember = "UserName";
-                foreach (User worker in workers)
-                {
-                    checkedListBoxWorkers.Items.Add(worker);
-                }
-
-            }
-        }
-
-        private void btn_addProjectToWorker_Click(object sender, EventArgs e)
-        {
-            List<User> users = new List<User>();
-            for (int i = 0; i < checkedListBoxWorkers.Items.Count; i++)
-            {   
-                if (checkedListBoxWorkers.GetItemChecked(i))
-                {
-                    users.Add((checkedListBoxWorkers.Items[i] as User));
-
-                }
->>>>>>> ae5ed1a4e5bfa890fc342e9e4214f82fce371fec
-            }
-            bool isSuccess = UserRequests.addWorkerToProject((cmbx_projects.SelectedItem as Project).ProjectId, users);
-            if (isSuccess)
-                MessageBox.Show("Success");
-            else MessageBox.Show("ERROR!");
-        }
-
-<<<<<<< HEAD
-      public  RadListDataItem getItemProject(Project project)
+        public RadListDataItem getItemProject(Project project)
         {
             RadListDataItem item = new RadListDataItem();
             item.Tag = project;
@@ -121,32 +53,13 @@ namespace manageTask
             item.Text = worker.UserName;
             item.Tag = worker;
             return item;
-=======
-        private void checkedListBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-             btn_addProjectToWorker.Visible = true;
->>>>>>> ae5ed1a4e5bfa890fc342e9e4214f82fce371fec
         }
 
-        void radButtonRemoveFromWorker_Click(object sender, EventArgs e)
-        {
-            while (this.checkedListBoxWorkers.CheckedItems.Count > 0)
-            {
-<<<<<<< HEAD
-                checkedListBoxWorkers.DisplayMember = "UserName";
-                foreach (User worker in workers)
-                {
-                    checkedListBoxWorkers.Items.Add(getItemWorker(worker));
-                }
-=======
-                this.checkedListBoxWorkers.Items.Remove(this.checkedListBoxWorkers.CheckedItems[0]);
->>>>>>> ae5ed1a4e5bfa890fc342e9e4214f82fce371fec
-            }
-        }
+
 
         private void checkedListBoxWorkers_ItemCheckedChanged(object sender, ListViewItemEventArgs e)
         {
-            if(checkedListBoxWorkers.Items.Where(p=>p.CheckState==ToggleState.On).Count()>0)
+            if (checkedListBoxWorkers.Items.Where(p => p.CheckState == ToggleState.On).Count() > 0)
             {
                 btn_addProjectToWorker.Visible = true;
             }
@@ -168,5 +81,40 @@ namespace manageTask
                 this.btn_checkAll.Text = "Check all";
             }
         }
+
+        private void cmbx_projects_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            checkedListBoxWorkers.Items.Clear();
+            int idPprojectSelect = (cmbx_projects.SelectedItem.Tag as Project).ProjectId;
+            List<User> workers = UserRequests.getWorkerNotInProject(idPprojectSelect);
+            if (workers != null)
+            {
+                checkedListBoxWorkers.DisplayMember = "UserName";
+                foreach (User worker in workers)
+                {
+                    checkedListBoxWorkers.Items.Add(getItemWorker(worker));
+                }
+
+            }
+        }
+
+        private void btn_addProjectToWorker_Click(object sender, EventArgs e)
+        {
+
+            List<User> users = new List<User>();
+            var workerAdd = checkedListBoxWorkers.Items.Where(p => p.CheckState == ToggleState.On).Select(p=>p.Tag).ToList();
+            foreach (var item in workerAdd)
+            {
+                users.Add(item as User);
+            }
+            bool isSuccess = UserRequests.addWorkerToProject((cmbx_projects.SelectedItem.Tag as Project).ProjectId, users);
+            if (isSuccess)
+                MessageBox.Show("Success");
+            else MessageBox.Show("ERROR!");
+        }
+
+
+
+
     }
 }
