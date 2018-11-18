@@ -45,7 +45,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://localhost:61309/api/addWorkersToProject/{projectId}");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/addWorkersToProject/{projectId}");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "PUT";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -72,7 +72,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://localhost:61309/api/sendMessageToManagers/{userId}");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/sendMessageToManagers/{userId}");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "PUT";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))

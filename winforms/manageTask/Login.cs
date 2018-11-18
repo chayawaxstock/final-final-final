@@ -18,7 +18,7 @@ namespace manageTask
 {
     public partial class Login : Telerik.WinControls.UI.RadForm
     {
-        public static b manager = new b();
+        public static Manager manager = new Manager();
         public static CompanyWorker companyWorker = new CompanyWorker();
         public static TeamLeader teamLeader = new TeamLeader();
         public static Main main = new Main();
@@ -58,7 +58,7 @@ namespace manageTask
                 //Post Request for Login
                 try
                 {
-                    var httpWebRequest = (HttpWebRequest)WebRequest.Create(@"http://localhost:61309/api/loginByPassword");
+                    var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"{GlobalProp.URI}api/loginByPassword");
                     httpWebRequest.ContentType = "application/json";
                     httpWebRequest.Method = "POST";
                     using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))

@@ -17,7 +17,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(@"http://localhost:61309/api/AddPresent");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($"{GlobalProp.URI}api/AddPresent");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -55,7 +55,7 @@ namespace manageTask.Logic
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://localhost:61309/api/updatePresentDay");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://{GlobalProp.URI}api/updatePresentDay");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "PUT";
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))

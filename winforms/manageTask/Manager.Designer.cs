@@ -1,6 +1,6 @@
 namespace manageTask
 {
-    partial class b
+    partial class Manager
     {
         /// <summary>
         /// Required designer variable.
@@ -62,6 +62,7 @@ namespace manageTask
             // 
             this.addProjectToolStripMenuItem.Name = "addProjectToolStripMenuItem";
             this.addProjectToolStripMenuItem.Text = "Add project";
+            this.addProjectToolStripMenuItem.Click += new System.EventHandler(this.addProjectToolStripMenuItem_Click_1);
             // 
             // managmentWorkersToolStripMenuItem
             // 
@@ -78,31 +79,37 @@ namespace manageTask
             // 
             this.editWorkersDetailsToolStripMenuItem.Name = "editWorkersDetailsToolStripMenuItem";
             this.editWorkersDetailsToolStripMenuItem.Text = "Edit worker\'s details";
+            this.editWorkersDetailsToolStripMenuItem.Click += new System.EventHandler(this.editWorkersDetailsToolStripMenuItem_Click_1);
             // 
             // setPermissionToolStripMenuItem
             // 
             this.setPermissionToolStripMenuItem.Name = "setPermissionToolStripMenuItem";
             this.setPermissionToolStripMenuItem.Text = "Set permission";
+            this.setPermissionToolStripMenuItem.Click += new System.EventHandler(this.setPermissionToolStripMenuItem_Click_1);
             // 
             // deleteWorkerToolStripMenuItem
             // 
             this.deleteWorkerToolStripMenuItem.Name = "deleteWorkerToolStripMenuItem";
             this.deleteWorkerToolStripMenuItem.Text = "Delete worker";
+            this.deleteWorkerToolStripMenuItem.Click += new System.EventHandler(this.deleteWorkerToolStripMenuItem_Click_1);
             // 
             // addANewWorkerToolStripMenuItem
             // 
             this.addANewWorkerToolStripMenuItem.Name = "addANewWorkerToolStripMenuItem";
             this.addANewWorkerToolStripMenuItem.Text = "Add a new worker";
+            this.addANewWorkerToolStripMenuItem.Click += new System.EventHandler(this.addANewWorkerToolStripMenuItem_Click_1);
             // 
             // addWorkerToProjectToolStripMenuItem
             // 
             this.addWorkerToProjectToolStripMenuItem.Name = "addWorkerToProjectToolStripMenuItem";
             this.addWorkerToProjectToolStripMenuItem.Text = "Add worker to project";
+            this.addWorkerToProjectToolStripMenuItem.Click += new System.EventHandler(this.addWorkerToProjectToolStripMenuItem_Click_1);
             // 
             // addWorkerToATeamLeaderToolStripMenuItem
             // 
             this.addWorkerToATeamLeaderToolStripMenuItem.Name = "addWorkerToATeamLeaderToolStripMenuItem";
             this.addWorkerToATeamLeaderToolStripMenuItem.Text = "Add worker to a team leader";
+            this.addWorkerToATeamLeaderToolStripMenuItem.Click += new System.EventHandler(this.addWorkerToATeamLeaderToolStripMenuItem_Click_1);
             // 
             // reportsToolStripMenuItem
             // 

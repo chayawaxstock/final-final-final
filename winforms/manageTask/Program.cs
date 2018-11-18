@@ -18,7 +18,9 @@ namespace manageTask
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddWorkerToProject());
+
+            Application.Run(new Main());
+
         }
     }
 }
