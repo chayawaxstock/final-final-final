@@ -36,11 +36,11 @@ namespace manageTask
             //tabControl_SelectedIndexChanged(sender, e);
             //this.reportViewer1.RefreshReport();
 
-           // UserProfil userControl = new UserProfil();
-           // userControl.Visible = true;
+            UserProfil userControl = new UserProfil();
+            userControl.Visible = true;
 
-            //this.Controls.Add(userControl);
-            //this.ResumeLayout();
+            this.Controls.Add(userControl);
+            this.ResumeLayout();
 
         }
 
